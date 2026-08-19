@@ -11,7 +11,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "#home" },
-    { name: "Shop", href: "#shop" },
+    // { name: "Shop", href: "#shop" },
     { name: "Flavors", href: "#flavors" },
     { name: "FAQ", href: "#faq" },
     { name: "Contact", href: "#contact" },
@@ -32,27 +32,23 @@ export default function Navbar() {
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className={`w-full max-w-5xl transition-all duration-500 flex items-center justify-between relative ${
-          isScrolled
-            ? "bg-[#FDEBD0]/90 backdrop-blur-2xl border-2 border-[#1E1B18] shadow-[4px_4px_0px_#1E1B18] py-3 px-5 sm:px-8 rounded-full"
-            : "bg-transparent border-transparent py-4 px-2 sm:px-6 rounded-full"
-        }`}
+        className={`w-full max-w-5xl transition-all duration-500 flex items-center justify-between relative ${isScrolled
+          ? "bg-[#FDEBD0]/90 backdrop-blur-2xl border-2 border-[#1E1B18] shadow-[4px_4px_0px_#1E1B18] py-3 px-5 sm:px-8 rounded-full"
+          : "bg-transparent border-transparent py-4 px-2 sm:px-6 rounded-full"
+          }`}
       >
-        {/* Playful Retro Pop Logo */}
+        {/* Playful Retro Pop Logo Badge */}
         <a
           href="#home"
-          className="flex items-center gap-3 group select-none"
+          className="flex items-center group select-none"
         >
-          <div className="w-11 h-11 rounded-full border-2 border-[#1E1B18] bg-[#FEF08A] text-[#E11D48] flex flex-col items-center justify-center text-[11px] leading-[1.05] tracking-widest shadow-[2px_2px_0px_#1E1B18] group-hover:rotate-6 group-hover:scale-105 transition-all">
-            <span>UN</span>
-            <span>OA</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="font-anton text-2xl tracking-tight text-[#E11D48] leading-none group-hover:text-[#1E1B18] transition-colors">
-              UNO CHA
+          <div className="bg-[#FEF08A] hover:bg-[#fde047] border-2 border-[#1E1B18] px-3.5 py-1.5 rounded-2xl shadow-[3px_3px_0px_#1E1B18] group-hover:shadow-[1px_1px_0px_#1E1B18] group-hover:translate-x-[1px] group-hover:translate-y-[1px] group-hover:-rotate-2 transition-all flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#E11D48] border border-[#1E1B18] animate-pulse" />
+            <span className="font-anton text-xl sm:text-2xl tracking-tight text-[#E11D48] leading-none">
+              UNO<span className="text-[#1E1B18] ml-1">CHA</span>
             </span>
-            <span className="text-[9px] uppercase tracking-[0.2em] text-[#1E1B18]/70 mt-0.5 flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#7DD3FC] border border-[#1E1B18]" /> POP MATCHA
+            <span className="text-[8px] uppercase tracking-wider bg-[#7DD3FC] text-[#1E1B18] px-1.5 py-0.5 rounded-md border border-[#1E1B18] font-bold hidden sm:inline-block">
+              POP
             </span>
           </div>
         </a>
@@ -66,9 +62,8 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setActiveTab(link.name)}
-                className={`relative px-5 py-2 text-xs uppercase tracking-widest transition-all duration-300 z-10 ${
-                  isActive ? "text-[#1E1B18]" : "text-[#1E1B18]/70 hover:text-[#E11D48]"
-                }`}
+                className={`relative px-5 py-2 text-xs uppercase tracking-widest transition-all duration-300 z-10 ${isActive ? "text-[#1E1B18]" : "text-[#1E1B18]/70 hover:text-[#E11D48]"
+                  }`}
               >
                 {isActive && (
                   <motion.span

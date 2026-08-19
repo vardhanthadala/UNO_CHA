@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Rounded Pop Yellow Squircle Background -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="#FEF08A" stroke="#1E1B18" stroke-width="4" />
+  
+  <!-- Pop Shadow Accent -->
+  <rect x="6" y="6" width="52" height="52" rx="12" fill="#FDE047" opacity="0.4" />
+  
+  <!-- Stylized Retro Soda / Tea Can Silhouette -->
+  <g transform="translate(18, 10)">
+    <!-- Can Body -->
+    <rect x="2" y="6" width="24" height="34" rx="5" fill="#7DD3FC" stroke="#1E1B18" stroke-width="3" />
+    
+    <!-- Can Top Rim -->
+    <path d="M 4 6 Q 14 3 24 6" stroke="#1E1B18" stroke-width="3" fill="#FFFBF3" stroke-linecap="round" />
+    <!-- Pull Tab -->
+    <ellipse cx="14" cy="3" rx="4" ry="2" fill="#FFFBF3" stroke="#1E1B18" stroke-width="2" />
+    
+    <!-- Red Center Pop Band -->
+    <path d="M 2 16 Q 14 18 26 16 L 26 28 Q 14 30 2 28 Z" fill="#E11D48" stroke="#1E1B18" stroke-width="2" />
+    
+    <!-- Bold 'U' Typography in Can -->
+    <text x="14" y="25" font-family="Arial, Impact, sans-serif" font-size="11" font-weight="900" fill="#FEF08A" text-anchor="middle" dominant-baseline="middle">U</text>
+    
+    <!-- Can Bottom Rim -->
+    <path d="M 4 40 Q 14 43 24 40" stroke="#1E1B18" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- Sparkle Star Accent -->
+  <path d="M 48 14 Q 48 18 52 18 Q 48 18 48 22 Q 48 18 44 18 Q 48 18 48 14 Z" fill="#E11D48" stroke="#1E1B18" stroke-width="1.5" />
+  <circle cx="12" cy="46" r="2.5" fill="#E11D48" stroke="#1E1B18" stroke-width="1.5" />
+</svg>

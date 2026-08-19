@@ -7,8 +7,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Uno Cha",
-  description: "Uno Cha",
+  title: "Uno Cha | Sparkling Social Tonic & Ceremonial Matcha",
+  description: "Crafted with premium shade-grown Kyoto tea leaves and cold-brewed to perfection. Pure sustained focus without jitters.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
