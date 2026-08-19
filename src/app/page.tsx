@@ -619,14 +619,14 @@ export default function Home() {
       <Navbar />
 
       {/* MAIN CONTAINER */}
-      <div className="px-4 sm:px-8 lg:px-12 xl:px-16 pt-24 sm:pt-28 max-w-[1600px] mx-auto w-full space-y-20 sm:space-y-28">
+      <div className="px-2.5 sm:px-8 lg:px-12 xl:px-16 pt-20 sm:pt-28 max-w-[1600px] mx-auto w-full space-y-16 sm:space-y-28">
         {/* HERO SECTION — Playful Retro Pop Card with Curved Waves */}
         <motion.header
           id="home"
           initial={{ opacity: 0, y: 35, scale: 0.98 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full bg-[#FDEBD0] text-[#1E1B18] px-5 sm:px-10 pb-8 sm:pb-12 pt-10 sm:pt-16 md:pt-20 rounded-[48px] relative z-0 overflow-hidden border-3 border-[#1E1B18] shadow-[8px_8px_0px_#1E1B18]"
+          className="w-full bg-[#FDEBD0] text-[#1E1B18] px-3 sm:px-10 pb-8 sm:pb-12 pt-8 sm:pt-16 md:pt-20 rounded-[36px] sm:rounded-[48px] relative z-0 overflow-hidden border-3 border-[#1E1B18] shadow-[5px_5px_0px_#1E1B18] sm:shadow-[8px_8px_0px_#1E1B18]"
         >
           {/* Retro Pop Fun Sticker Badges */}
           <motion.div
@@ -656,7 +656,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30, scale: 0.96 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.85, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-                className="font-anton text-6xl sm:text-8xl md:text-9xl lg:text-[11rem] xl:text-[13rem] uppercase tracking-tight text-[#E11D48] select-none leading-none"
+                className="font-anton text-5xl xs:text-6xl sm:text-8xl md:text-9xl lg:text-[11rem] xl:text-[13rem] uppercase tracking-tight text-[#E11D48] select-none leading-none"
               >
                 UNO CHA
               </motion.h1>
