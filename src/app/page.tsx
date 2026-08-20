@@ -3,6 +3,7 @@
 import React, { useState, useRef } from "react";
 import Navbar from "@/components/Navbar";
 import UnoChaLogo from "@/components/UnoChaLogo";
+import ScrollTriggerExperience from "@/components/ScrollTriggerExperience";
 import { ArrowRight, ShoppingCart, Heart, Check, Sparkles, Star, Zap, Smile, Volume2, VolumeX } from "lucide-react";
 import { motion, AnimatePresence, useMotionValue, useTransform, useSpring } from "framer-motion";
 
@@ -209,7 +210,9 @@ function MagneticFaqCard({
   );
 }
 
-// Interactive Aesthetic Video Banner with 3D Tilt, Hover Zoom, & Audio Toggle
+
+
+// Interactive Aesthetic Commercial Video Banner with 3D Tilt, Hover Zoom, & Audio Toggle
 function InteractiveVideoBanner() {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -255,7 +258,7 @@ function InteractiveVideoBanner() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={handleMouseLeave}
       onClick={toggleMute}
-      className="w-full relative rounded-[48px] overflow-hidden border-3 border-[#1E1B18] shadow-[8px_8px_0px_#1E1B18] hover:shadow-[16px_16px_0px_#1E1B18] hover:-translate-y-1 transition-all duration-500 group cursor-pointer will-change-transform"
+      className="w-full relative rounded-[36px] sm:rounded-[48px] overflow-hidden border-3 border-[#1E1B18] shadow-[8px_8px_0px_#1E1B18] hover:shadow-[16px_16px_0px_#1E1B18] hover:-translate-y-1 transition-all duration-500 group cursor-pointer will-change-transform bg-black"
     >
       {/* Top Left Badge */}
       <div className="absolute top-6 left-6 z-20 flex items-center gap-2 bg-[#FEF08A] px-4 py-1.5 rounded-full border-2 border-[#1E1B18] shadow-[2px_2px_0px_#1E1B18] group-hover:rotate-6 group-hover:scale-105 transition-transform duration-300">
@@ -266,7 +269,7 @@ function InteractiveVideoBanner() {
       {/* Top Right Sound Toggle Pill */}
       <button
         onClick={toggleMute}
-        className="absolute top-6 right-6 z-20 flex items-center gap-2 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full border-2 border-[#1E1B18] shadow-[2px_2px_0px_#1E1B18] hover:bg-[#E11D48] hover:text-white transition-all text-xs font-semibold uppercase tracking-wider text-[#1E1B18]"
+        className="absolute top-6 right-6 z-20 flex items-center gap-2 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full border-2 border-[#1E1B18] shadow-[2px_2px_0px_#1E1B18] hover:bg-[#E11D48] hover:text-white transition-all text-xs font-semibold uppercase tracking-wider text-[#1E1B18] cursor-pointer"
       >
         {isMuted ? <VolumeX className="w-4 h-4 text-[#E11D48]" /> : <Volume2 className="w-4 h-4 text-[#E11D48]" />}
         <span>{isMuted ? "Sound Off" : "Sound On"}</span>
@@ -276,7 +279,7 @@ function InteractiveVideoBanner() {
       <video
         ref={videoRef}
         src="https://res.cloudinary.com/dsppgndcp/video/upload/v1787158086/Firefly_A_sleek_aesthetic_commercial_for_-UNO_CHA-_sparkling_beverage_cans_with_a_-0g_Sugar_-_No_Su.mp4"
-        className="w-full h-[400px] sm:h-[500px] md:h-[600px] object-cover filter brightness-[0.92] group-hover:brightness-100 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+        className="w-full h-[380px] sm:h-[480px] md:h-[580px] object-cover filter brightness-[0.92] group-hover:brightness-100 group-hover:scale-[1.03] transition-all duration-700 ease-out"
         autoPlay
         muted
         loop
@@ -780,48 +783,10 @@ export default function Home() {
           </motion.div>
         </motion.header>
 
-        {/* CINEMATIC VIDEO BANNER */}
-        <motion.section
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full space-y-6"
-        >
-          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
-            <div>
-              <motion.span
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                className="text-xs uppercase tracking-widest text-[#E11D48] flex items-center gap-1.5"
-              >
-                <Sparkles className="w-4 h-4" /> FEEL THE ENERGY
-              </motion.span>
-              <motion.h2
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="font-anton text-4xl sm:text-5xl md:text-6xl uppercase tracking-tight text-[#1E1B18] mt-1"
-              >
-                SEE IT <span className="text-[#E11D48]">IN MOTION</span>
-              </motion.h2>
-            </div>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="text-sm text-[#1E1B18]/70 max-w-sm"
-            >
-              Watch how Uno Cha brings the perfect fusion of ceremonial matcha and sparkling refreshment to life.
-            </motion.p>
-          </div>
-
-          <InteractiveVideoBanner />
-        </motion.section>
+        {/* APPLE-GRADE SCROLLTRIGGER CINEMATIC EXPERIENCE */}
+        <section className="w-full">
+          <ScrollTriggerExperience frameCount={120} />
+        </section>
 
         {/* FLAVORS SECTION (#flavors) — Organic Wave Cards */}
         <motion.section
@@ -867,6 +832,49 @@ export default function Home() {
               <FlavorCard key={idx} flv={flv} idx={idx} isGlobalHovered={isAnyFlavorHovered} />
             ))}
           </div>
+        </motion.section>
+
+        {/* COMMERCIAL REEL & THE VIBE SECTION */}
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          className="w-full space-y-6"
+        >
+          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
+            <div>
+              <motion.span
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                className="text-xs uppercase tracking-widest text-[#E11D48] flex items-center gap-1.5 font-bold"
+              >
+                <Sparkles className="w-4 h-4" /> THE UNO CHA VIBE
+              </motion.span>
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                className="font-anton text-4xl sm:text-5xl md:text-6xl uppercase tracking-tight text-[#1E1B18] mt-1"
+              >
+                AESTHETIC IN <span className="text-[#E11D48]">EVERY DROP</span>
+              </motion.h2>
+            </div>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              className="text-sm text-[#1E1B18]/70 max-w-sm"
+            >
+              Sleek canned ceremonial matcha crafted for modern social rituals. 0g sugar, 100% natural Kyoto energy.
+            </motion.p>
+          </div>
+
+          <InteractiveVideoBanner />
         </motion.section>
 
         {/* SHOP COLLECTION (#shop) */}

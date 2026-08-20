@@ -1,0 +1,7 @@
+{
+  "frameCount": 120,
+  "width": 960,
+  "height": 540,
+  "framePrefix": "/hero-frames/frame_",
+  "frameSuffix": ".webp"
+}
